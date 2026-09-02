@@ -311,20 +311,20 @@ ul{ margin:0; padding:0; list-style:none; }
 .resto__note{ display:inline-flex; align-items:center; gap:9px; font-size:14px; color:#9db0e6; font-weight:600; }
 .resto__note svg{ width:17px; height:17px; }
 
-/* Before / After */
-.ba{ display:flex; flex-direction:column; gap:14px; }
-.ba__row{ display:grid; grid-template-columns:1fr 1fr; gap:14px; align-items:start; }
+/* Before / After — stacked full-width sequence */
+.ba{ display:flex; flex-direction:column; gap:16px; }
+.ba__row{ display:grid; grid-template-columns:1fr; gap:16px; }
 .ba__item{
-  position:relative; aspect-ratio:4/3; align-self:start;
+  position:relative; aspect-ratio:3/2;
   border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-md); background:#22252b;
 }
 .ba__item img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 .ba__tag{
-  position:absolute; top:12px; left:12px; background:rgba(12,14,18,.8); color:#fff;
-  font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; padding:6px 11px; border-radius:6px;
+  position:absolute; top:14px; left:14px; z-index:2; background:rgba(12,14,18,.82); color:#fff;
+  font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; padding:7px 13px; border-radius:6px;
   backdrop-filter:blur(4px);
 }
-.ba__caption{ font-size:13px; color:#9aa0ab; text-align:center; }
+.ba__caption{ font-size:13px; color:#9aa0ab; text-align:center; margin-top:2px; }
 @media (max-width:900px){ .resto__grid{ grid-template-columns:1fr; } }
 @media (max-width:520px){ .resto__list{ grid-template-columns:1fr; } }
 
